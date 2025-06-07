@@ -31,6 +31,15 @@
     <a href="#" class="logo">
       <img src="logoCom.jpg" alt="Creative NYC Logo" />
     </a>
+
+ <div class="socket">
+  <div class="toggle-icon">☀️</div>
+</div>
+
+
+
+
+
     <nav>
       <ul class="nav-links">
         <li><a href="#hero">Home</a></li>
@@ -211,27 +220,7 @@
   </div>
 </section>
 
-<script>
-  window.addEventListener('scroll', () => {
-    const reveals = document.querySelectorAll('.reveal');
-    for (let i = 0; i < reveals.length; i++) {
-      const windowHeight = window.innerHeight;
-      const revealTop = reveals[i].getBoundingClientRect().top;
-      const revealPoint = 150;
-      if (revealTop < windowHeight - revealPoint) {
-        reveals[i].classList.add('active');
-      }
-    }
-  });
-</script>
-
-
-<script>
-  document.getElementById('menu-toggle').addEventListener('click', function () {
-    this.classList.toggle('active');
-    document.querySelector('.nav-links').classList.toggle('open');
-  });
-</script>
+<script src="sript.js"> </script>
 
 
 

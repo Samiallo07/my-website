@@ -15,6 +15,190 @@ body {
   overflow-x: hidden;
 }
 
+
+
+body.light-theme {
+  background: url("light.jpg") no-repeat center center fixed;
+  background-size: cover;
+  color: #121212;
+}
+
+
+
+.socket {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 60px;
+  height: 30px;
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: -0.05em 0.1em 0.2em -0.2em white;
+  transition: background 0.3s;
+}
+
+.toggle-icon {
+  font-size: 18px;
+  transition: transform 0.4s ease;
+}
+
+
+
+body.light-theme header {
+  background: white;
+  border-bottom: 1px solid #ccc;
+}
+
+body.light-theme .nav-links li a {
+  color: black;
+}
+
+body.light-theme .nav-links li a::after {
+  background: black;
+}
+
+body.light-theme .btn {
+  background: black;
+  color: white;
+}
+
+body.light-theme .btn:hover {
+  background: #222;
+}
+
+body.light-theme .card .content .icon {
+  background: rgba(240, 240, 240, 0.9);
+  color: var(--color);
+}
+
+body.light-theme .card:hover .content .icon {
+  background: var(--color);
+  color: white;
+}
+
+body.light-theme .card .content .text h3,
+body.light-theme .card .content .text p,
+body.light-theme .card .content .text a {
+  color: black;
+}
+
+body.light-theme .about-right h1,
+body.light-theme .bold,
+body.light-theme .normal,
+body.light-theme .about-text-grid p {
+  color: #121212;
+}
+
+body.light-theme .trusted-section .text,
+body.light-theme .trusted-section .text span {
+  color: black;
+}
+
+body.light-theme .contact-left h2,
+body.light-theme .contact-left p,
+body.light-theme .contact-right h4,
+body.light-theme .contact-right p {
+  color: black;
+}
+
+body.light-theme .contact-form input,
+body.light-theme .contact-form textarea {
+  border-bottom: 1px solid #888;
+  color: #111;
+}
+
+body.light-theme .contact-form button {
+  background: black;
+  color: white;
+}
+
+body.light-theme .social-icons a {
+  color: black;
+}
+
+body.light-theme .social-icons a:hover {
+  color: #222;
+}
+
+
+
+/* LIGHT THEME - Section Backgrounds and Text Enhancements */
+body.light-theme .container2,
+body.light-theme .media-wrapper,
+body.light-theme .trusted-section,
+body.light-theme .about-wrapper,
+body.light-theme .services-section,
+body.light-theme .contact-section {
+  background: rgba(255, 255, 255, 0.768);
+  color: #111;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  padding: 20px;
+  margin: 20px auto;
+}
+
+/* LIGHT THEME - Improve text readability in sections */
+body.light-theme .container2 h2,
+body.light-theme .services-title,
+body.light-theme .about-right h1 {
+  color: #111;
+}
+
+body.light-theme .container2 p,
+body.light-theme .btn,
+body.light-theme .trusted-section .text,
+body.light-theme .card .content .text p,
+body.light-theme .normal p {
+  color: #333;
+}
+
+/* LIGHT THEME - Slight border/box effects */
+body.light-theme .card {
+  background: #ffffff;
+  border: 1px solid #eee;
+}
+
+body.light-theme .about-left img {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+body.light-theme .video-main {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+body.light-theme .logo-row img {
+  filter: brightness(0.8);
+}
+body.light-theme .logo-row img:hover {
+  filter: brightness(1);
+}
+
+/* Light Theme – Hero Section Fix */
+body.light-theme .container2 h2 {
+  color: black; /* Dark bold heading */
+}
+
+body.light-theme .container2 p {
+  color: #333; /* Medium gray paragraph text */
+}
+
+body.light-theme .btn {
+  background: black;
+  color: white;
+}
+
+body.light-theme .btn:hover {
+  background: #222;
+}
+
+
+
+
 /* Animation Keyframes */
 @keyframes fadeSlideDown {
   0% { opacity: 0; transform: translateY(-40px); }
@@ -163,6 +347,26 @@ nav {
 }
 
 
+/* Fix Theme Toggle (Socket) Position for Mobile */
+@media (max-width: 768px) {
+  .socket {
+    top: 10px;
+    right: 10px;
+    width: 45px;
+    height: 28px;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: none;
+    z-index: 1001;
+  }
+
+  .toggle-icon {
+    font-size: 16px;
+  }
+}
+
+
+
+
 
 
 
@@ -181,7 +385,6 @@ nav {
 #hero h2 {
   font-size: 2.4rem;
   margin-bottom: 1.2rem;
-  color: white;
   font-weight: 700;
   animation: fadeSlideDown 1s ease-out forwards;
   opacity: 0;
